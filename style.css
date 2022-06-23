@@ -44,6 +44,17 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  animation-name:headerlogo;
+  animation-duration: 3s;
+  animation-iteration-count: 4;
+  animation-direction:alternate-reverse;
+
+}
+
+@keyframes headerlogo{
+  from{transform: rotateY(0deg);}
+  to{transform:rotateY(150deg);}
+
 }
 
 .headerbuttondiv{
@@ -68,7 +79,12 @@ header {
   padding:10px 40px;
   position:absolute;
   top:0;
-  left:80%
+  left:80%;
+  transition: width 2s ease-in-out;
+}
+#headerbutton:hover{
+  background-color: rgb(231, 207, 174);
+  width: 15%;
 }
 
 .row2 {
@@ -114,9 +130,11 @@ h2 {
   cursor: pointer;
   font-family: "open_sans";
   width: 40%;
+  transition: width 2s;
 }
 .introbutton:hover, .lastbutton:hover {
   background-color: hsl(322, 81%, 80%);
+  width: 60%;
 }
 .mockupimage {
   max-width: 100%;
@@ -150,12 +168,10 @@ p {
 }
 
 .firsth3 {
-  /*grid-area: box1;*/
   margin: 35px 35px 5px 35px;
   padding: 10px 10px 2px 10px;
 }
 .secondp {
-  /*grid-area: box2;*/
   font-family: "open_sans";
   margin: 5px 35px 35px 35px;
   font-family: "open_sans";
@@ -166,7 +182,6 @@ p {
   width: 40%;
 }
 .growtogether {
-  /*grid-area: box3;*/
   width: 100%;
   height: auto;
 }
@@ -187,12 +202,10 @@ p {
 }
 
 .secondh3 {
-  /*grid-area: box1;*/
   margin: 35px 35px 5px 35px;
   padding: 10px 10px 2px 10px;
 }
 .thirdp {
-  /*grid-area: box2;*/
   font-family: "open_sans";
   margin: 5px 35px 35px 35px;
   font-family: "open_sans";
@@ -203,7 +216,6 @@ p {
   width: 40%;
 }
 .flowingconversations {
-  /*grid-area: box3;*/
   width: 100%;
   height: auto;
 }
@@ -219,20 +231,18 @@ p {
   justify-content: center;
   align-items: center;}
 
-/*.row5{
-  position: relative;
-}*/
+
 .row5text {
   width: 40%;
 }
 
 .thirdh3 {
-  /*grid-area: box1;*/
+  
   margin: 35px 35px 5px 35px;
   padding: 10px 10px 2px 10px;
 }
 .fourthp {
-  /*grid-area: box2;*/
+  
   font-family: "open_sans";
   margin: 5px 35px 35px 35px;
   font-family: "open_sans";
@@ -243,7 +253,7 @@ p {
   width: 40%;
 }
 .yourusers {
-  /*grid-area: box3;*/
+  
   width: 100%;
   height: auto;
 }
@@ -257,7 +267,6 @@ p {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  /*margin: 80px 60px 5px 60px;*/
   padding: 15px;
   border: 2px;
   border-radius: 5px;
@@ -272,7 +281,6 @@ width:50%}
 }
 
   .lastbutton {
-    /*grid-area: sbutton;*/
     margin: 30px;
     padding: 15px;
     border: none;
@@ -280,7 +288,8 @@ width:50%}
     background-color: hsl(322, 100%, 66%);
     cursor: pointer;
     font-family: "open_sans";
-    /*width: 40%;*/}
+    transition: width 2s;
+    }
 
 footer {
   background-color: hsl(192, 100%, 9%);
